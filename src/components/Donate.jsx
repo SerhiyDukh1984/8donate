@@ -32,7 +32,7 @@ export default function Donate({ handleCloseDonate }) {
     setDonate({
       sum: Number(value),
       id: nanoid(),
-        date: formattedDate,
+      date: formattedDate,
     });
   };
 
@@ -42,7 +42,6 @@ export default function Donate({ handleCloseDonate }) {
         ...donate,
         fee,
         total,
-        
       });
       dispatch(addDonateReducer([...state, donate]));
     }
@@ -50,10 +49,10 @@ export default function Donate({ handleCloseDonate }) {
     handleCloseDonate();
   };
 
-  useEffect(()=>{
-    setDonate({...donate, fee, total})
+  useEffect(() => {
+    setDonate({ ...donate, fee, total });
     // eslint-disable-next-line
-  },[sum, fee, total,])
+  }, [sum, fee, total]);
 
   return (
     <CContainer

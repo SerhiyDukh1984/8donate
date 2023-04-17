@@ -10,11 +10,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeDonateBlock } from "../../redux/donateBlock/donateBlockSlice";
 
 export const DonateForm = ({ getAvatar, block }) => {
-  const check = useSelector((state) => state.donateBlock.checked);
-  console.log("🚀 ~ check:", check);
-  // const [checked, setChecked] = useState(check)
   const dispatch = useDispatch();
-  // console.log("🚀 ~ checked:", checked)
+  const check = useSelector((state) => state.donateBlock.checked);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,7 +32,6 @@ export const DonateForm = ({ getAvatar, block }) => {
       getAvatar({ ...block, left: value });
     }
     if (name === "check") {
-      // setChecked(!checked)
       dispatch(changeDonateBlock({ ...block, checked: !check }));
     }
   };

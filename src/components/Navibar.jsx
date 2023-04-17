@@ -46,8 +46,12 @@ export const Navibar = () => {
               alignItems: "center",
             }}
           >
-            <img src="/images/logo-no-background.svg" alt="logo"  width="156px" height="56px" />
-          
+            <img
+              src="/images/logo-no-background.svg"
+              alt="logo"
+              width="156px"
+              height="56px"
+            />
           </CNavbarBrand>
           <CCol md={6}>
             <CNavbarNav style={{ justifyContent: "space-between" }}>
@@ -148,4 +152,4 @@ export const Navibar = () => {
       </CNavbar>
     </>
   );
-}
+};

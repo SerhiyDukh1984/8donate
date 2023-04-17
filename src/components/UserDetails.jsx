@@ -39,7 +39,10 @@ export const UserDetails = () => {
                 Name: {user.firstName} {user.lastName}
               </CCardTitle>
               <CCardText>
-                Phone: <a href="tel:{user.phone}" style={{ textDecoration: "none" }}>{user.phone}</a>
+                Phone:{" "}
+                <a href="tel:{user.phone}" style={{ textDecoration: "none" }}>
+                  {user.phone}
+                </a>
               </CCardText>
               <CCardText>
                 Email:{" "}

@@ -1,20 +1,14 @@
+import { CImage } from "@coreui/react";
 import { useDispatch } from "react-redux";
 import { Rnd } from "react-rnd";
 import { changeDonateBlock } from "../../redux/donateBlock/donateBlockSlice";
 import { CloseBtn } from "../CloseBtn";
 
-export const DonateInfoBlock = ({
-  closeDonateBlock,
-  block,
-  getAvatar,
-  src,
-}) => {
+export const DonateInfoBlock = ({ closeDonateBlock, block, src }) => {
   const dispatch = useDispatch();
 
   return (
     <div style={{ paddingTop: "100px" }}>
-      
-
       <Rnd
         size={{ width: block.blockWidth, height: block.blockHeight }}
         position={{ x: block.blockX, y: block.blockY }}
@@ -40,7 +34,7 @@ export const DonateInfoBlock = ({
         }}
       >
         {block.avatarHeight && (
-          <img
+          <CImage
             src={src}
             alt="avatar"
             width={

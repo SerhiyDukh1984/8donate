@@ -1,3 +1,5 @@
+import { CButton, CImage } from "@coreui/react";
+
 export const CloseBtn = ({ closeDonateBlock, closeSubscriptionBlock, closeTrackingBlock }) => {
   const handleClick = () => {
     if (closeDonateBlock) {
@@ -12,7 +14,7 @@ export const CloseBtn = ({ closeDonateBlock, closeSubscriptionBlock, closeTracki
   };
 
   return (
-    <button
+    <CButton
       type="button"
       onClick={handleClick}
       style={{
@@ -25,12 +27,12 @@ export const CloseBtn = ({ closeDonateBlock, closeSubscriptionBlock, closeTracki
         border: "none",
       }}
     >
-      <img
+      <CImage
         src="/images/ios-close-3.svg"
         alt="close"
         width="20px"
         height="20px"
       />
-    </button>
+    </CButton>
   );
 };

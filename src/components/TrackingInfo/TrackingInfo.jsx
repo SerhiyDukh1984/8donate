@@ -5,8 +5,7 @@ import { CloseBtn } from "../CloseBtn";
 
 export const TrackingInfo = () => {
   const isOpen = useSelector((state) => state.trackingBlock.isOpen);
-  const check = useSelector(state=> state.trackingBlock.checked)
-  console.log("🚀 ~ isOpen:", isOpen);
+  // const check = useSelector((state) => state.trackingBlock.checked);
   const block = useSelector((state) => {
     const { blockWidth, blockHeight, blockX, blockY, isOpen, checked } =
       state.trackingBlock;
@@ -68,9 +67,7 @@ export const TrackingInfo = () => {
               left: `${block.textLeft}px`,
             }}
           >
-            <h4 style={{ fontSize: `${block.blockHeight / 6}px` }}>
-              Tracking
-            </h4>
+            <h4 style={{ fontSize: `${block.blockHeight / 6}px` }}>Tracking</h4>
             <p style={{ fontSize: `${block.blockHeight / 10}px` }}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laboriosam, expedita.
@@ -83,4 +80,3 @@ export const TrackingInfo = () => {
     </div>
   );
 };
-

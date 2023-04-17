@@ -6,10 +6,9 @@ export const Footer = () => {
     <CFooter
       style={{
         display: "flex",
-        // justifyItems: "auto",
         position: "fixed",
         bottom: "0",
-         width: "100%"
+        width: "100%",
       }}
     >
       <CContainer
@@ -26,13 +25,14 @@ export const Footer = () => {
         <div>
           <CLink
             href="https://coreui.io"
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               textDecoration: "none",
-              color: "#ffffff"
+              color: "#ffffff",
             }}
           >
-            8donate  
+            8donate
           </CLink>
           <span> &copy; 2023 creativeLabs.</span>
         </div>
@@ -40,10 +40,11 @@ export const Footer = () => {
           <span>Powered by </span>
           <CLink
             href="https://coreui.io"
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               textDecoration: "none",
-              color: "#ffffff"
+              color: "#ffffff",
             }}
           >
             8donate

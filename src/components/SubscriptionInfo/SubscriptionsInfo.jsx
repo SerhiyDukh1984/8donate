@@ -1,3 +1,4 @@
+import { CButton } from "@coreui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { Rnd } from "react-rnd";
 import { changeSubscriptionBlock } from "../../redux/SubscriptionBlock/SubscriptionBlockSlice";
@@ -5,8 +6,7 @@ import { CloseBtn } from "../CloseBtn";
 
 export const SubscriptionInfo = () => {
   const isOpen = useSelector((state) => state.subscriptionBlock.isOpen);
-  const check = useSelector(state=> state.subscriptionBlock.checked)
-  console.log("🚀 ~ isOpen:", isOpen);
+  // const check = useSelector((state) => state.subscriptionBlock.checked);
   const block = useSelector((state) => {
     const { blockWidth, blockHeight, blockX, blockY, isOpen, checked } =
       state.subscriptionBlock;
@@ -32,9 +32,9 @@ export const SubscriptionInfo = () => {
 
   return (
     <div style={{ paddingTop: "100px" }}>
-      <button type="button" onClick={handleClick}>
+      <CButton type="button" onClick={handleClick}>
         start
-      </button>
+      </CButton>
       {isOpen && (
         <Rnd
           size={{ width: block.blockWidth, height: block.blockHeight }}
